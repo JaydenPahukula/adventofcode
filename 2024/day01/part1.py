@@ -1,11 +1,17 @@
+from sys import stdin
+data = [x.replace('\n','') for x in stdin.readlines()]
 
-def solution():
+la,lb = [],[]
+for line in data:
+    a,b = line.split()
+    la.append(int(a))
+    lb.append(int(b))
 
-    with open("input.txt", "r") as file:
-        data = [x.replace('\n','') for x in file.readlines()]
-    
+la.sort()
+lb.sort()
 
-    return
+count = 0
+for i in range(len(la)):
+    count += abs(la[i]-lb[i])
 
-
-print(solution())
+print(count)

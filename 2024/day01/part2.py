@@ -1,11 +1,15 @@
+from sys import stdin
+from collections import defaultdict
+data = [x.replace('\n','') for x in stdin.readlines()]
 
-def solution():
+la,lb = [],defaultdict(int)
+for line in data:
+    a,b = line.split()
+    la.append(int(a))
+    lb[int(b)] += 1
 
-    with open("input.txt", "r") as file:
-        data = [x.replace('\n','') for x in file.readlines()]
-    
+count = 0
+for a in la:
+    count += a*lb[a]
 
-    return
-
-
-print(solution())
+print(count)

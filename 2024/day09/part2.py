@@ -1,11 +1,3 @@
+from sys import stdin
+data = [x.replace('\n','') for x in stdin.readlines()]
 
-def solution():
-
-    with open("input.txt", "r") as file:
-        data = [x.replace('\n','') for x in file.readlines()]
-    
-
-    return
-
-
-print(solution())
